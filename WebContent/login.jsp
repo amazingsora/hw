@@ -14,7 +14,7 @@
 	密碼:<input type="text" name="password" id="password">
 </form>
 	<button id="send">送出</button>
-
+ 
 <script>
 $("#send").on("click", function() {
 	$("#form").submit();
