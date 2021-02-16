@@ -24,20 +24,27 @@ public class LoginFilter implements Filter {
 		HttpServletRequest request = (HttpServletRequest) req;
 		HttpServletResponse response = (HttpServletResponse) res;
 		HttpSession session = request.getSession();
+		boolean lockLogin = false;
 		// 排除
 		boolean isExcludedPage = false;
-		for (String page : excludedPageArray) {// 判斷是否在過濾url之外
-			if (request.getServletPath().equals(page)) {
+		for (String page : excludedPageArray) {
+			if (request.getServletPath().indexOf(page)>-1) {
+				if(request.getServletPath().indexOf("login")>-1) {
+					lockLogin = true;
+				}
 				isExcludedPage = true;
 				break;
 			}
 		}
 
-		if (session.getAttribute("login") != null) {
+		if (session.getAttribute("login") != null ) {
 			chain.doFilter(request, response);
+			if(lockLogin == true) {
+
+			}
 			return;
 		} else {
-			if (isExcludedPage) {// 在過濾url之外
+			if (isExcludedPage) {
 				chain.doFilter(request, response);
 				return;
 			}

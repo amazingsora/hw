@@ -3,6 +3,8 @@ package com.demo.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.apache.commons.lang3.StringUtils;
 
 import com.demo.model.UserDao;
@@ -19,14 +21,14 @@ public class LoginService {
 			return err;
 		}
 		UserVO user = dao.LoginUser(userVo);
-		if(user == null) {
+		if (user == null) {
 			err.add("帳號密碼異常 查無使用者");
-		}
-		else {
-			if(!"Y".equals(user.getStatus().trim())) {
-				err.add(user.getAccount()+"尚未啟用");
+		} else {
+			if (!"Y".equals(user.getStatus().trim())) {
+				err.add(user.getAccount() + "尚未啟用");
 			}
 		}
 		return err;
 	}
+
 }

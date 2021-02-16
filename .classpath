@@ -17,6 +17,12 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jstl.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/ojdbc6.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/standard.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/poi-5.0.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/poi-examples-5.0.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/poi-excelant-5.0.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/poi-integration-5.0.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/poi-scratchpad-5.0.0.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-lang3-3.11.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/poi-ooxml-full-5.0.0.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

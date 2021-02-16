@@ -13,6 +13,12 @@
 	<li>
 		<span ><a href="<c:url value="/userDetail"/>">UserDatil</a></span>
 	</li>
+	<li>
+		<span ><a href="<c:url value="/uploadFile?action=page"/>">EXCEL上傳</a></span>
+	</li>
+	<li>
+		<span ><a href="<c:url value="/uploadPic?action=page"/>">EXCEL上傳</a></span>
+	</li>
 </ul>
 ${login} 登入成功
 </body>
