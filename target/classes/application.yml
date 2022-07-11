@@ -1,0 +1,20 @@
+server:
+   port: 8838 
+   servlet:
+      context-path: /hw 
+
+spring:
+   h2:
+   console:
+      enabled: true
+   datasource:
+      url: jdbc:h2:file:D:/h2 # h2 database 連接位址
+      driver-class-name: org.h2.Driver # 配置driver
+      username: sa # database 用戶名
+      password:
+      jpa:
+         database-platform: org.hibernate.dialect.H2Dialecttt
+   mvc:
+      view:
+         prefix: /WEB-INF/
+         suffix: .jsp
