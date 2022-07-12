@@ -20,7 +20,7 @@ public class SecurityConfig {
 		// TODO Auto-generated method stub
 		http.authorizeRequests()
 				// 設定放行名單
-				.antMatchers("/login").permitAll()
+				.antMatchers("/login","/sc/**").permitAll()
 				// 其餘路徑皆須進行驗證
 				.anyRequest().authenticated().and().formLogin().loginPage("/login").usernameParameter("hwUser")
 				.passwordParameter("hwPW")
