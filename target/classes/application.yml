@@ -8,7 +8,7 @@ spring:
    console:
       enabled: true
    datasource:
-      url: jdbc:h2:file:D:/h2 # h2 database 連接位址
+      url: jdbc:h2:file:c:/h2 # h2 database 連接位址
       driver-class-name: org.h2.Driver # 配置driver
       username: sa # database 用戶名
       password:
